@@ -32,7 +32,7 @@ namespace controle.financeiro.api
 
             services.AddTransient<IAccountRepository, AccountRepository>();
             services.AddTransient<AccountFlows, AccountFlows>();
-            services.AddScoped(i => new MongoContext(configDb.User, configDb.Password, configDb.Hash, configDb.Database, configDb.Port));
+            services.AddScoped(i => new MongoContext(configDb.User, configDb.Password, configDb.ConnectTo, configDb.Database, configDb.Port));
 
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);

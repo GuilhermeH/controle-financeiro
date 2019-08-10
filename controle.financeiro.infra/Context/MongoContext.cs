@@ -7,9 +7,9 @@ namespace controle.financeiro.infra.Context
     {
         private readonly IMongoDatabase _database;
 
-        public MongoContext(string user, string password, string hash, string dataBase, string port)
+        public MongoContext(string user, string password, string connectTo, string dataBase, string port)
         {
-            var urlDataBase = $"mongodb://{user}:{password}{hash}.mlab.com:{port}/{dataBase}";// "mongodb://admin:c0ntr0l3@ds247377.mlab.com:47377/controlefinanceiro"
+            var urlDataBase = $"mongodb://{user}:{password}{connectTo}.mlab.com:{port}/{dataBase}";// "mongodb://admin:c0ntr0l3@ds247377.mlab.com:47377/controlefinanceiro"
             //"urlDataBase": 
             MongoClient client = new MongoClient(urlDataBase);
             _database = client.GetDatabase(dataBase);
