@@ -2,9 +2,7 @@
 using controle.financeiro.domain.Entities;
 using controle.financeiro.infra.Context;
 using MongoDB.Driver;
-using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace controle.financeiro.infra.Repositories
 {
