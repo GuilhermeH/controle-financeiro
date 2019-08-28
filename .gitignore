@@ -3,3 +3,4 @@
 /*/bin
 /*/obj
 controle.financeiro.api/appsettings.json
+controle.financeiro.api/appsettings.Development.json
